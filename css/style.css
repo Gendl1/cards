@@ -1,0 +1,146 @@
+@font-face {
+    font-family:"Poppins Extra-Light";
+    src: local("Poppins"),
+    url("../fonts/poppins-el.woff2") format("woff2");
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family:"Poppins Semi-Bold";
+    src: local("Poppins"),
+    url("../fonts/poppins-sb.woff2") format("woff2");
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family:"Poppins Regular";
+    src: local("Poppins"),
+    url("../fonts/poppins-r.woff2") format("woff2");
+    font-style: normal;
+    font-display:swap;
+}
+
+
+body {
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 540px;
+    margin: 0 auto ;
+}
+
+.title {
+    font-family: "Poppins Extra-Light";
+    font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+    margin: 56px 30px 0 29px;
+}
+
+.title_black {
+    font-family: "Poppins Semi-Bold";
+}
+
+.subtitle {
+    font-family: "Poppins Regular";
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin: 16px 30px 0 29px;
+}
+
+.cards__grid {
+    display: grid;
+    margin: 60px 30px 46px 31px;
+    gap: 32px;
+    grid-template-areas: 
+    "Supervisor"
+    "Team-Builder"
+    "Karma"
+    "Calculator";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+}
+
+.grid__card {
+    min-height: 250px;
+    max-width: 314px;
+    padding: 28px 32px 47px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    -webkit-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-sizing: border-box;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.card_border-aqua {
+    border-top: 4px solid #44D3D2;
+}
+
+.card-aqua {
+    grid-area: Supervisor;
+}
+
+.card-red {
+    grid-area: Team-Builder;
+}
+
+.card-yellow {
+    grid-area: Karma;
+}
+
+.card-blue {
+    grid-area: Calculator;
+}
+
+.card_border-red {
+    border-top: 4px solid #ea5454;
+}
+
+.card_border-yellow {
+    border-top: 4px solid #fcae4a;
+}
+
+.card_border-blue {
+    border-top: 4px solid #549ef2;
+}
+
+.card-title {
+
+}
+
+.card-subtitle {
+    margin-top: 6px;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-icon {
+    margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+    .cards__grid {
+        grid-template-areas:
+        "Supervisor Supervisor"
+        "Team-Builder Karma"
+        "Calculator Calculator";
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto;
+    }
+}
