@@ -1,7 +1,8 @@
 @font-face {
     font-family:"Poppins Extra-Light";
     src: local("Poppins"),
-    url("../fonts/poppins-el.woff2") format("woff2");
+    url("../fonts/Poppins/poppins-el.woff2") format("woff2");
+    font-weight: 275px;
     font-style: normal;
     font-display:swap;
 }
@@ -9,7 +10,8 @@
 @font-face {
     font-family:"Poppins Semi-Bold";
     src: local("Poppins"),
-    url("../fonts/poppins-sb.woff2") format("woff2");
+    url("../fonts/Poppins/poppins-sb.woff2") format("woff2");
+    font-weight: 600px;
     font-style: normal;
     font-display:swap;
 }
@@ -17,7 +19,8 @@
 @font-face {
     font-family:"Poppins Regular";
     src: local("Poppins"),
-    url("../fonts/poppins-r.woff2") format("woff2");
+    url("../fonts/Poppins/poppins-r.woff2") format("woff2");
+    font-weight: 400px;
     font-style: normal;
     font-display:swap;
 }
@@ -28,31 +31,34 @@ body {
 }
 
 .container {
-    max-width: 540px;
     margin: 0 auto ;
 }
 
 .title {
     font-family: "Poppins Extra-Light";
+    font-weight: 275px;
     font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
-    margin-top: 56px;
     margin: 56px 30px 0 29px;
+    color: #4D4F62;
 }
 
 .title_black {
     font-family: "Poppins Semi-Bold";
+    font-weight: 600px;
 }
 
 .subtitle {
     font-family: "Poppins Regular";
+    font-weight: 400px;
     font-size: 15px;
     display: flex;
     justify-content: center;
     margin-top: 16px;
     margin: 16px 30px 0 29px;
+    color: #4D4F62;
 }
 
 .cards__grid {
@@ -83,6 +89,7 @@ body {
 .card-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .card_border-aqua {
@@ -118,10 +125,15 @@ body {
 }
 
 .card-title {
-
+    font-family: "Poppins Semi-Bold";
+    font-weight: 600px;
+    color: #4D4F62;
 }
 
 .card-subtitle {
+    font-family: "Poppins Regular";
+    font-weight: 400px;
+    color: #6A7178;
     margin-top: 6px;
 }
 
@@ -142,5 +154,19 @@ body {
         "Calculator Calculator";
         grid-template-rows: auto auto auto;
         grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .cards__grid {
+        grid-template-areas:
+        "Supervisor Team-Builder Calculator"
+        "Supervisor Karma Calculator";
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto;
+    }
+
+    .grid__card {
+        max-height: 250px;
     }
 }
