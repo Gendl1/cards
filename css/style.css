@@ -1,7 +1,8 @@
 @font-face {
     font-family:"Poppins Extra-Light";
     src: local("Poppins"),
-    url("../fonts/Poppins/poppins-el.woff2") format("woff2");
+    url("../fonts/Poppins/poppins-el.woff2") format("woff2"),
+    url("../fonts/Poppins/poppins-el.woff") format("woff");
     font-weight: 275px;
     font-style: normal;
     font-display:swap;
@@ -10,7 +11,8 @@
 @font-face {
     font-family:"Poppins Semi-Bold";
     src: local("Poppins"),
-    url("../fonts/Poppins/poppins-sb.woff2") format("woff2");
+    url("../fonts/Poppins/poppins-sb.woff2") format("woff2"),
+    url("../fonts/Poppins/poppins-sb.woff") format("woff");
     font-weight: 600px;
     font-style: normal;
     font-display:swap;
@@ -19,7 +21,8 @@
 @font-face {
     font-family:"Poppins Regular";
     src: local("Poppins"),
-    url("../fonts/Poppins/poppins-r.woff2") format("woff2");
+    url("../fonts/Poppins/poppins-r.woff2") format("woff2"),
+    url("../fonts/Poppins/poppins-r.woff") format("woff");
     font-weight: 400px;
     font-style: normal;
     font-display:swap;
@@ -37,7 +40,6 @@ body {
 .title {
     font-family: "Poppins Extra-Light";
     line-height: 140%;
-    font-weight: 275px;
     font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
     flex-wrap: wrap;
     display: flex;
@@ -48,13 +50,13 @@ body {
 
 .title_black {
     font-family: "Poppins Semi-Bold";
-    font-weight: 600px;
+    margin: 0;
+
 }
 
 .subtitle {
     font-family: "Poppins Regular";
     line-height: 140%;
-    font-weight: 400px;
     font-size: 15px;
     display: flex;
     justify-content: center;
@@ -127,13 +129,11 @@ body {
 .card-title {
     font-family: "Poppins Semi-Bold";
     line-height: 135%;
-    font-weight: 600px;
     color: #4D4F62;
 }
 
 .card-subtitle {
     font-family: "Poppins Regular";
-    font-weight: 400px;
     color: #6A7178;
     margin-top: 6px;
     line-height: 160%;
